@@ -9,8 +9,6 @@ $app->container->singleton('db', function(){
 	return new PDO('mysql:host=127.0.0.1;dbname=slim2-blog', 'root', 'root');
 });
 
-$app->get('/home', function(){
-	echo 'Hello!';
-});
+require 'routes.php';
 
 $app->run();
